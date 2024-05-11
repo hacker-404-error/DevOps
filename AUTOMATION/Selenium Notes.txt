@@ -1,0 +1,419 @@
+Automation Testing
+
+- It is a process where test suites are run by the automated scripts using various tools.
+
+Why do we need to Automate
+
+- Frequent regression testing
+- Virtually unlimited execution of test cases is required
+- Rapid feedback to developers
+- Reduction in human efforts
+- Test same application in multiple environment
+- Finding defects missed in manual testing
+
+Advantages of Automation Testing
+
+- Optimization of Speed, Efficiency, Quality and the Decrease of Costs
+- Advances Tester's Motivation and Efficiency
+- Increase of Test Coverage
+- Testing Improves Accuracy
+
+What tests should be automated
+
+- Repetitive tests (retest, regression test)
+- Tests that tend to cause human error
+- Tests that require multiple data sets
+- Tests that are complex & time consuming to perform manually
+- Tests that run on several hardware & software
+
+-----------------------------------------------------------------------------------------------------
+
+Introduction to Selenium
+
+- Selenium is a powerful open-source suite of automation tools for automating browser in multiple platforms
+- It is compatible with all available web browsers
+- With Selenium framework, manual testing efforts are minimized,testers are able to deliver test cycles faster by automating repeated test cases
+- Selenese is the language used to write selenium commands
+
+Components of Selenium Suite
+
+1. Selenium IDE(Integrated Development Environment):
+ - Selenium IDE is a browser extension for Chrome and Firefox that allows testers to record and playback interactions with the browser.
+ - It's a simple tool for creating quick automation scripts without the need for extensive programming knowledge.
+ - Selenium IDE is primarily used for prototyping and creating basic test scripts.
+
+2. Selenium RC (Remote Control):
+ - Selenium RC was an earlier version of Selenium that allowed interaction with browsers through a server.
+ - It has been deprecated in favor of Selenium WebDriver due to its limitations.
+
+3. Selenium Grid
+ - Selenium Grid is used for parallel and distributed test execution.
+ - It allows running tests on multiple machines and browsers simultaneously, enabling faster execution and increased test coverage.
+ - Selenium Grid consists of a hub that distributes test execution to multiple nodes.
+
+4. Selenium WebDriver
+ - WebDriver is the core component of Selenium.
+ - It provides a programming interface to interact with web browsers.
+ - WebDriver supports various programming languages such as Java, Python, C#, Ruby, and more.
+ - It allows automated interaction with web elements (like clicks, input, and form submissions) and navigation through web pages.
+
+Benefits of Selenium WebDriver:
+
+- It is one of the most popular Open-Source tools and is easy to get started with for testing web-based applications. It also allows you to perform cross browser compatibility testing.
+- Supports multiple operating systems like Windows, Mac, Linux, Unix, etc.
+- It provides compatibility with a range of languages, including Python, Java, Perl, Ruby, etc.
+- Provides support for modern browsers like Chrome, Firefox, Safari, and Internet Explorer.
+- Selenium WebDriver completes the execution of test scripts faster when compared to other tools
+- More Concise API (Application Programming interface) than Selenium RC’s
+- It also provides compatibility with iPhoneDriver, HtmlUnitDriver, and AndroidDriver
+- Selenium supports parallel test execution.
+- Selenium can be integrated with TestNG and JUnit to generate test reports and manage test cases.
+- Selenium can be integrated with Jenkins, Docker, and Maven to attain continuous testing. 
+
+Drawbacks :
+
+- Selenium can test only web applications. It cannot test software applications and other desktop applications. 
+- Selenium cannot access the web elements outside the web applications that are under test.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Maximize browser window using Selenium Webdriver  ---  manage() method
+			driver.manage().window().maximize();
+
+
+
+Maven , add maven dependencies (POM.xml) (like selenium java jar file)
+selenium-java
+
+
+
+simple script (setProperty --m,webdriver,driver)      1. Setting the driver path
+steps to Instantiate WebDriver			      2. Creating WebDriver instance( initilizing the driver)
+						      3. Navigate to web page ( launched )
+
+--------------------------------------------------------------------------------------------------------------------
+
+findElement(): This method uniquely finds a web element on the web page.
+Syntax :  WebElement elementName = driver.findElement(By.LocatorStrategy("LocatorValue"));
+
+
+findElements(): This method finds a list of web elements on the web page.
+Syntax: List<WebElement> elementName = driver.findElements(By.LocatorStrategy("LocatorValue"));
+
+
+findElement locators strategies	. id				By-- locator   By.Id
+				. name
+				. class name
+				. tag name
+				. CSS selector
+				. XPath
+				. linkText
+				. Partiallinktext
+
+driver.findElements(By.tagname("LocatorValue"));
+		
+
+Web driver methods  	. get()   open the app
+			. getCurrentURL()  --- current url
+			. getTitle()		title of page
+			. getText()
+			. getTagName()
+			. getCSSValue()
+			. getAttribute(string name)
+			. quit()
+			. close()
+
+
+Browser Navigate methods  . driver.navigate().to(appUrl);    to back forward refresh
+			  . driver.navigate().back()
+			  . driver.navigate().forward() 
+			  . driver.navigate().refresh() 
+
+
+Web Elements methods    . findElement()
+			. sendKeys() - used to enter text in the web element
+			. submit() - used to submit a form
+			. click() - used to perform click on the web element
+			. clear() - used to clear entered text
+			. isEnabled()
+			. isDisplayed()
+			. isSelected()
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Xpath   - XPath stands for XML Path Language and it uses "path like" syntax to identify and navigate nodes in an XML document
+
+. Absolute xpath  - It contains the complete path from root element to desire element
+			    It is a direct way to find element 
+			    Single forward slash (/)
+			eg:- 
+			/html/body/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/div[1]/input[1]
+
+	. Relative xpath  - It is simply like refrencing the element and go from particular location 
+			    not a complete path from root element, can start from middle of HTML DOM structure
+			    Double slash (//)
+			    so relative xpath is always preferred
+			eg:  //input[@placeholder="Username"]
+
+
+Syntax:    //tagname[@attribute='value']
+ 	
+//     --  current node
+tagname -- tagname of particular node like input, div etc
+@	--  allows you to select attribute
+attribute -- select attribute like id , name, classname etc
+value	-- value of attribute
+
+
+eg:-  //input[@name='password']
+      //*[@id='login']
+	//input[@type='text']
+	//input[@class='username3241']
+	//a[@href='https://www.google.com']
+	//img[@src='../images/java.png']
+
+
+* methods:       basic xpath  -- //tagname[@attribute='value']
+		 contains     -- //tagname[contains(@attribute,'value')]
+		 text 	      -- //tagname[text()='value']
+		 starts-with  -- //tagname[starts-with(@attribute,'value')]
+		 or ,and      -- //tagname[@attribute='value' or @attribute='value']
+				 //tagname[@attribute='value' and @attribute='value']
+
+		contains     //*[contains(@placeholder,'Username')]
+		text         //h4[text()='Password for all users:']
+		starts-with  //input[starts-with(@type,'submit')]
+		OR	     //input[@type='text' or @id='user-name']
+		AND	     //input[@type='text' and @id='user-name']
+
+---------------------------------------------------------------
+
+Axes  
+XPath Axes in Selenium WebDriver used to locate a web element which is not having any attributes on it's own, can't locate it directly using any of the locator strategy which selenium WebDriver provides except XPath and very useful to locate dynamic XPath. In such cases we can use XPath Axes mechanism to locate based on other web elements present in the HTML Document. We can use any one or all of the XPath axes names/method to locate any web element on given web page.
+
+XPath Axes Names/Methods ========
+    
+1) Self -- Selects the current node
+2) Parent -- Selects the parent of the current node
+3) Child  --  Selects all children of the current node
+4) Ancestor  --Selects all ancestors (parent, grandparent, etc.) of the current node
+5) Descendant  --  Selects all descendants (children, grandchildren, etc.) of the current node
+6) Following-sibling  --  Selects all siblings after the current node
+7) Preceding-sibling -- Selects all siblings before the current node
+
+syntax
+//tagname[@attribute='value']/Axes::tagname[0]
+//tagname[@attribute='value']/Axes::tagname/axes::tagname[0]
+
+examples
+//div[@class='form_group']/descendant::input[1]
+//div[@class='form_group']/parent::form/child::div[1]
+//div[@class='form_group']/child::input[1]
+//div[@class="form_group"]/parent::form
+
+//div[@class="form_group"]/ancestor::div[@class="login_wrapper"]
+//div[@class="form_group"]/ancestor::div[4]
+
+//div[@class="form_group"]/child::input
+
+//div[@class="error-message-container"]/preceding-sibling::div
+
+------------------------------------------------------------------------------------------------------------------------
+Xpath and Xpath Axes
+
+	* syntax   //tagname[@attribute='value']
+
+	* absolute and relative
+
+	* methods: contains 
+		 text 
+		 starts-with
+		 or ,and
+	* XPath axes methods
+		following,preceding,ancestor,parent,child,following-sibling,self,descendant
+
+
+-------------------------------------------------------------------------------------------------------------
+Drop Down       Select --- The Select Class in Selenium is a method used to implement the HTML SELECT tag. methods to select and deselect the elements. The Select class is an ordinary class so New keyword is used to create its object and it specifies the web element location.
+
+		selectByVisibleText()           single
+		deselectByVisibleText()		multiple option
+		selectByValue() 		single
+		deselectByValue()		multiple option
+		selectByIndex()			single
+		deselectByIndex()		multiple option
+	        isMultiple()       --  boolean  returns TRUE if the drop-down element allows multiple selection at a 										time; FALSE if otherwise
+		deselectAll()	-- Clears all selected entries. This is only valid when the drop-down element supports multiple selections.
+		getFirstSelectedOption()  -- This method returns the first selected option of the dropdown
+		getAllSelectedOption()    --  This method returns all the selected options of the dropdown
+		getOptions()		-- There are times when you need to get all the options in a dropdown or multi-select box. This is where you can use the getOptions() method of the Select class.
+
+
+-----------------------------------------------------------------------------------------------
+
+Actions  class	---  it is a built in feature provided by selenium for handling mouse and keyboard events
+			 build()   perform()
+	    	  with movetoElement & without , sendkeys()
+		
+	methods ----		single , double, right(context) ,sendkeys(), drag and drop
+
+
+	actions					webelement
+	
+	sendkeys()				sendkeys()
+
+	simulate the keyboard key		typing ther text into the text fields
+	by press and release
+
+	like tab,enter,down,up etc		like "username"
+------------------------------------------------------------------------------------------
+
+Frame :- Frames are a now deprecated means of building a site layout from multiple documents on the same domain.
+		The frame enables a developer to split the screen horizontally or vertically by using the frameset tag.
+		An iframe is also known as an inline frame.
+		 An iframe tag is defined using <iframe></iframe> tags
+		
+
+Handle Frames   driver.switchTo().frame();  ---  by index,id&name ,parent , frame element
+<iframe>
+
+drivedr.switchTO().Frame(index)
+drivedr.switchTO().Frame(name & id)
+drivedr.switchTO().Frame(WebElement)
+drivedr.switchTO().parentFrame(), defaultContent()
+
+. switchTo()  --  helps to switch between the Frames
+
+------------------------------------------------------------------------------------------
+
+wait Synchronization  --  coordination process between the components is termed Synchronisation.
+		      -- Synchronisationin Selenium executes the code and applications, which must be in synchronisation to perform the operation.
+		     --  wait command in selenium direct test script to pause for certain time before throwing "ElementNotVisibleException" ,  NoSuchElementException , InvalidSelectorException , TimeoutExcetion
+
+
+   1. Implicit wait -- dynamic wait , global ( tells the web driver to wait for certain amount of time before it throws 
+---exception as NoSuchElementException found ,  it will wait till maximum of the seconds given   
+--- driver.manage().timeouts().implicitWait(duration.ofSeconds());
+
+-	When finding the element in any webpage selenium doesn't wait for any time, so if the element is not available 	immediately then selenium webdriver will throw the exception i.e: NoSuchElementException 
+	For eg: element A takes 0sec to find and element B takes 2sec to find
+- You can allow the selenium webdriver to wait for some time to find the element using Implicit Wait Timeout.
+
+--------------------------------------------------------------------------------------------------------------------
+
+   2. Explicit wait(WebDriverWait) -- 
+
+dynamic , applicable to particular webelement like button,textbox & if the elements taking bit time to load then we can specify explicit to those element to appear first then proceed
+- Explicit wait is applied for specific elements on page which take more time load or appear.
+
+-	The Explicit Wait in Selenium is used to tell the Web Driver to wait for certain conditions (Expected Conditions) or 	maximum time exceeded before throwing “ElementNotVisibleException” exception. It is an intelligent kind of wait, but it can be applied only for specified elements.
+
+-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds());
+		wait.until(ExpectedConditions.visibilityOf(element));
+-    define “WebDriverWait” class on the webpage until the “ExpectedConditions” are met .
+--------------------------------------------------------------------------------------------------------------------
+
+   3. Fluent wait -- 
+
+dynamic ,we can specify polling frequency (if element take long time but u want it to be checked by small interval of time i.e polling ), specify exculsion of the exception that can happen , similar to explicit wait
+
+-	The Fluent Wait in Selenium is used to define maximum time for the web driver to wait for a condition, as well as the 	frequency with which we want to check the condition before throwing an “ElementNotVisibleException” exception. It checks 	for the web element at regular intervals until the object is found or timeout happens.
+
+-	Frequency: Setting up a repeat cycle with the time frame to verify/check the condition at the regular interval of time
+
+-	FluentWait<WebDriver> wait=new FluentWait<WebDriver>(driver)
+		.withTimeout(Duration.ofSeconds())
+		.pollingEvery(Duration.ofSeconds())
+		.withMessage("Fluent wait")
+		.ignoring(Exception.class);
+		wait.until(ExpectedConditions);
+
+--------------------------------------------------------------------------------------------------------------------
+   
+. sleep() -- Static wait , it stop the script
+
+--------------------------------------------------------------------------------------------------------------------
+
+Javascript executor  : 	
+			-- It is an interface which provides mechanism to execute javascript through selenium driver.
+
+* Two methods
+1. ExecuteScript : execute javascript in the currently selected window or frame.
+2. ExecuteAsyncScript : execute asynchronous javascript in the current window or frame.
+
+
+* STEPS :	
+	1. Import the package -- Import org.openqa.selenium.JavascriptExecutor;
+	2. Create a reference -- JavascriptExecutor js = (JavascriptExecutor) driver;
+	3. Call the JavascriptExecutor method -- js.executeScript(script, args);
+
+	JavaScriptExecutor js=(JavaScriptExecutor)driver;
+	refresh  -- js.executeScript("location.reload()");
+	ScrollBy(H,V)  --- js.executeScript("window.scrollBy(0,450)");
+	click()  
+
+--------------------------------------------------------------------------------------------------------------------
+
+TestNG
+
+TestNG is one of the most widely used open source testing framework used in automation testing suite.
+
+Advantages of TestNG
+
+- In TestNG, annotations are easier to understand than Junit.
+- It produces the HTML reports for implementation.
+- It also generates the Logs.
+- In TestNG, there is no constraint available such as @beforeclass and @afterclass which is present in Junit.
+- TestNG enables you to group the test cases easily which is not possible in JUnit.
+- TestNG supports three additional levels such as @Before/After suite, @Before/AfterTest, and Before/AfterGroup.
+- Parallel execution of test cases, i.e., running multiple test cases is only possible in the TestNG framework.
+
+Anotations
+
+@BeforeSuite	The @BeforeSuite annotated method will run before the execution of all the test methods in the suite.
+
+@AfterSuite	The @AfterSuite annotated method will run after the execution of all the test methods in the suite.
+
+@BeforeTest	The @BeforeTest annotated method will be executed before the execution of all the test methods of available classes belonging to that folder.
+
+@AfterTest	The @AfterTest annotated method will be executed after the execution of all the test methods of available classes belonging to that folder.
+
+@BeforeClass	The @BeforeClass annotated method will be executed before the first method of the current class is invoked.
+
+@AfterClass	The @AfterClass annotated method will be invoked after the execution of all the test methods of the current class.
+
+@BeforeMethod	The @BeforeMethod annotated method will be executed before each test method will run.
+
+@AfterMethod	The @AfterMethod annotated method will run after the execution of each test method.
+
+@BeforeGroups	The @BeforeGroups annotated method run only once for a group before the execution of all test cases belonging to that group.
+
+@AfterGroups	The @AfterGroups annotated method run only once for a group after the execution of all test cases belonging to that group.
+
+-------------------------------------------------------------------------------------------------------------------
+
+Page Object Model
+
+Page Object Model (POM) is a design pattern, popularly used in test automation that creates Object Repository for web UI elements. The advantage of the model is that it reduces code duplication and improves test maintenance.
+
+In this we use By class to store the element
+
+By username = By.name("username");
+
+Advantages of POM
+- Page Object Design Pattern says operations and flows in the UI should be separated from verification. This concept makes our code cleaner and easy to understand.
+- The Second benefit is the object repository is independent of test cases, so we can use the same object repository for a different purpose with different tools. For example, we can integrate Page Object Model in Selenium with TestNG/JUnit for functional Testing and at the same time with JBehave/Cucumber for acceptance testing.
+- Code becomes less and optimized because of the reusable page methods in the POM classes.
+- Methods get more realistic names which can be easily mapped with the operation happening in UI. i.e. if after clicking on the button we land on the home page, the method name will be like ‘gotoHomePage()’.
+
+--------------------------------------------------------------------------------------------------------------
+
+Page Factory
+
+Page Factory in Selenium is an inbuilt Page Object Model framework concept for Selenium WebDriver but it is very optimized. It is used for initialization of Page objects or to instantiate the Page object itself. It is also used to initialize Page class elements without using “FindElement/s.”
+
+In this we use @FindBy annotation to locate the element
+
+@FindBy(name="username")
+WebElement userName;  

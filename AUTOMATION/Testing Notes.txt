@@ -1,0 +1,640 @@
+Testing
+
+Testing is just a process or method we use to check the quality of the product as per Client requirement/user requirement
+
+Quality
+
+Quality refers to the attributes/behaviour of a product.
+
+If a software satifies the customer requirements, then we call it a good quality software.
+
+In software testing Quality is checked using Quality Management process which includes
+QA Quality Assurance
+QC Quality Control
+
+QA - It is a preventive approach (preventing defects) i.e. it prevents the faults from occuring
+     It is conducted during the process.
+     The whole team is responsible for QA.
+
+QC - It is a corrective approach i.e. it corrects the fault when they occur. 
+     It is conducted on the product.
+     The testers are responsible for QC.
+
+Error - It is a human made mistake.
+Defects/Bugs - It causes the program to work in a unintended manner / It is a mismatch of expected and actual result.
+Failure - It is the unability of the system to perform as per the requirement.
+
+Reasons behind defects.
+1. Time pressure
+2. Unexperienced people
+3. Miscommunication
+4. Complexity of the code, design
+
+Root Cause and effect
+Root cause of the defects are the earliest actions that contributes to creating the defects.
+Root cause analysis - It can help in preventing future defects.
+
+Cost of Software Defects:
+Earlier a defect is detected it will take less time and cost.
+
+
+Principles of Software Testing.
+
+7 principles
+1. Testing shows presence of defects, not their absense
+2. Exhaustive Testing is not possible
+3. Early Testing saves time and money
+4. Defects cluster together - A small number of modules contains most of the defects.
+5. Beware of pesticide paradox - Repititve use of similar test cases may become inaffective.
+6. Testing is context dependent - We use different testing methods for different types of products/softwares.
+7. Absence of error is a fallacy
+
+
+Scope of testing (MSC)
+
+i What we might test? It determines the areas which are within the scope.
+ ii. What we should test? It determines the critical system functionalities.
+iii. What we can test? It is used estimate time and resource.
+
+
+Test activities
+
+1. Test Planning
+
+Test planning is the first step of the testing process. In this phase we identify the activities and resources which would help to meet the testing objectives. 
+
+2. Test Monitoring and control
+
+Test monitoring involves an on-going comparison of actual progress against the test plan using any test monitoring metrics defined in the test plan. 
+
+Test control involves taking actions necessary to meet the objectives of the test plan. 
+
+3. Test analysis
+
+Test analysis determines “what to test” in terms of measurable coverage criteria. 
+
+4. Test Design 
+
+Defines “HOW” to test.
+The testers will develop the test cases based against the requirements of the customer. There are usually three levels of requirements, to be understood by the testers before they can proceed to write the test cases for the product
+•HLI ( High level Information)
+•LLI / Use Cases ( Low level Information )
+•Snapshots (Prototype or images of a similar product or framework.)
+
+5. Test implementation
+
+During test implementation, the testware necessary for test execution is created and/or completed, including sequencing the test cases into test procedures. 
+It answers "do we now have everything to test?"
+
+6. Test execution
+
+Test execution is the process of executing the code and comparing the expected and actual results. Following factors are to be considered for a test execution process:
+- Based on a risk, select a subset of test suite to be executed for this cycle.
+- Assign the test cases in each test suite to testers for execution.
+- Execute tests, report bugs, and capture test status continuously.
+- Resolve blocking issues as they arise.
+- Report status, adjust assignments, and reconsider plans and priorities daily.
+- Report test cycle findings and status.
+
+7. Test completion.
+
+Test completion activities collect data from completed test activities to consolidate experience, testware, and any other relevant information.
+
+Attributes of a good tester
+ - test to break attitude
+ - tester should have different views / mindset
+ - understanding of user requirements
+ - communication
+ - patience
+ - work under pressure
+
+
+
+SDLC
+
+It is a process to design, develop and test high quality softwares
+
+Two categories of SDLC models
+1. Sequential Model - Waterfall Model - Is one of the earliest model where all the task/process are executed in a sequential manner.
+2. Iterative/incremental model - Instead of developing a software in large development timeline, we develop the software in small development cycles.
+
+V&V Model ( Verification and Validation Model)
+
+Verification - Set of activity which ensures that software correctly implements all the required functions.
+	       It checks whether we are building the product right. 
+	       It carries on the process and conducted by the entire team.
+
+Validation - Set of activities which ensures that the software build is working as per customer requirement
+	     It checks whether we have build the right product.
+  	     It is carried out on the product and testers are responsible for it.
+
+
+Test Levels
+
+Unit Testing - It is a code based testing technique which are performed by the developers. It is carried out on small modules/components.
+
+Integration Testing - It demonstrate that the modules are working correctly or not after integration.
+
+System Testing - It is concerned with the behavior of the whole system/product. The main focus of this testing is to verify the system against the requirements.
+
+Acceptance Testing - Validate the system/prodcut with respect to user requirements.
+
+
+Types of Testing 
+
+1. Functional Testing  - It majorly focuses on the overall functionality of the system.
+2. Non-functional Testing - It focuses on the performace, security, usability of the system.
+
+Testing Techniques
+Black box testing - It is a type of testing that focuses on testing the functionalities of the software without the knowledge of internal workings. 
+White box testing - It is a types of testing where the tester has the complete knowledge about the internal structure of the software.
+Grey box testing - It is a cobination of black and white box testing, where the tester has partial knowledge about the internal structure of the software.
+
+
+Types of System Testing
+▪ Performance Testing
+▪ Volume Testing
+▪ Load Testing
+▪ Stress Testing
+▪ Security Testing
+▪ Web Security Testing
+▪ Localization Testing
+▪ Usability Testing
+▪ Recovery Testing
+▪ Documentation Testing
+▪ Configuration Testing
+▪ Installation Testing
+▪ User Acceptance Testing
+▪ Testing related to Changes : ReTesting and Regression Testing
+▪ Re-testing (Confirmation Testing)
+▪ Regression Testing
+▪ Exploratory Testing
+▪ Maintenance Testing
+
+Functional Testing
+- Functional Testing is a type of Software Testing in which the system is tested against the functional requirements and specifications.
+- Functional testing ensures that the requirements or specifications are properly satisfied by the application.
+- It is also called as Behavioural Testing
+- We use Postive Testing and Negative Testing to perform functional testing.
+
+Postive Testing
+- Valid data
+eg: Mobile no should accept only 10 chars
+      9087654325 = valid test data
+
+Negative Testing
+- Invalid data
+eg: Mobile no should accept only 10 length of chars
+      Mobile no should accept only numbers	
+      908765432512 = Invalid test data 
+      908765432qwe = Invalid test data
+
+- Test case will be passed if we get the error message
+- Test case will be failed if we dont get the error message (defect is raised/Logged)
+
+Performance Testing
+- It concentrates on response time
+- Response time (time taken by the application to grant the user request/response)
+
+Load Testing (No of users)
+- It helps to check how many users can access the application server
+- Load Testing is a type of Performance Testing which determines the performance of a system, software product or software application under real life based load conditions.
+- Basically load testing determines the behavior of the application when multiple users use it at the same time.
+
+Volume Testing (No of records/data)
+- Is a type of Software Testing, where the software is subjected to a huge volume of data.
+- It is also referred to as flood testing. Volume testing is done to analyze the system performance by increasing the volume of data in the database.
+
+Stress Testing
+- The process of determining the ability of a computer, network, program or device to maintain a certain level of effectiveness under unfavorable conditions
+- Is used to check the break point of the application server
+- We can check Load and Volumne break point 
+
+Security testing
+- Authentication,Autorization of the application
+- Testing that uncovers vulnerabilities of the system and determines that the data and resources of the system are protected from possible intruders.
+
+Web Security Testing
+http
+https
+Lock symbol
+Vurnabilities(errors) security
+
+Examples for WST
+Data loss
+Un authrorised access
+Data will be corrupted
+- How we are maintaining the security in Web based applications
+- Penetration test (used to identify errors)
+
+Localization Testing
+- We check for interactions between different teams available in different localities
+- We modify few settings in order to meet the requirements across different localities
+- Different culture    
+
+ Usability Testing
+- It is done from an end user's perspective to determine if the system is easily usable. 
+- It is a part of User Acceptance Testing
+- User friendlyness of the application
+- Application should be easy to use and implement
+
+Recovery Testing
+- Recovery testing is a type of non-functional testing technique performed in order to determine how quickly the system can recover after it has gone through system crash or hardware failure.
+- How soon the application can recover the error
+- Simulate a software failure by unplugging the system power and plug it again to ensure the app recovers and resumes receiving data from the point of failure
+
+Documentation Testing
+- We test the documents and check for errors.
+- We check for standards,rules.
+
+Configuration Testing
+- Differnt hardware and software requirements (os,browsers,ram,processor etc)
+- Updating,modifying,making changes in the hardware requirement will be considered in Configuration Testing Team (Admin Team)
+
+Installation Testing
+- We check whether system is working or not
+- If there are any changes done, after the changes system is working or not
+
+Retest
+- Retesting is a procedure where we need to check that particular test cases which are found with some bugs during the execution time. 
+- Retesting also occurs when the product is already tested and due to some problems it needs to be tested again. This tests is named as retesting.
+
+Regression Testing
+- Regression testing is a software testing practice that ensures an application still functions as expected after any code changes, updates, or improvements.
+- Regression testing is responsible for the overall stability and functionality of the existing features.
+
+Exploratory Testing
+- It allows you to think outside the box and come up with use cases that might not be covered in a test case.
+- Exploring the whole application
+- All the components of the application will be executed
+
+Maintenance Testing
+- After deployment of the system to the client, if the client finds a defect we need to fix
+- For system updates, for enhancement, customization of the system
+- We need to check whether the defect is fixed or not
+- We need to check updates are working as per requirements or not
+
+4- Acceptance Testing
+    - It is conducted after the completion of System Testing
+    - It is a quality assurance (QA) process that determines to what degree an application meets end users' approval
+  
+Two types of Testing in acceptance testing
+- User Acceptance Testing
+- Organizational/OPerational Acceptance Testing
+1- Alpha Test
+2- Beta Test
+
+Alpha Test
+   - Is conducted in production environment/company
+   - Alpha Testing is a type of software testing performed to identify bugs before releasing the product to real users or to the public.
+   - It is a part of User Acceptance Testing (UAT)
+
+Beta Test
+   - Beta test with real people in real environments. Recruit beta testers & get the power to build the best new products of tomorrow. Schedule a Call Get a Demo.
+   - A beta test is the second phase of software testing in which a sampling of the intended audience tries the product out. 
+
+
+Static Testing
+
+- Testing method that involves the examination of a program, along with any associated documents, but does not require the program to be executed.
+- Static testing is nothing but reviewing the documents
+- Here we test the application without executing the code
+- To collect the feedback
+- Review is nothing but analyzing the documents/work products/delieverables
+
+Types of Static Testing
+
+- Review (meeting)
+- Code Inspection
+- Walkthorugh
+- Desk Checking
+
+Review (meeting)
+- Is nothing but meeting
+- Gathering feedback from different users.
+
+Formal Review
+Informal Review
+
+Formal Review
+- Which is conducted within a week or month
+- Need to be conducted by following a normal process
+- It is documented
+
+Roles
+Author- Creates the work product under review
+Management
+Facilitator
+  - (often called moderator)
+Reviw Leader
+Reviewers
+Scribe
+  - (or recorder)
+
+Process for conducting formal review
+- Planning (Management)
+- Implement(Initiate Review)
+- Preparation (Individual review (i.e., individual preparation)
+- Rework
+- Follow Up
+
+Code Inspection
+- Check for errors (Logical or syntactical errors)
+- Code is creating by following coding standards
+- Checking quality of the code
+
+Walkthorugh (Informal Review)
+- Informal reviews are applied multiple times during the early stages of software development process
+- There is a no formal process followed
+- It can be conducted whenever you want
+
+Desk Checking (Informal Review)
+- It is done not by the author but by a different team member
+- The document is reviewed by diferent resource
+-  A desk check helps programmers to find bugs and errors which would prevent the application from functioning properly.
+
+Pair programming (Informal Review)
+- 2 resource are involded in this review
+- 1 person writes the code and another person reviews the code
+- Is an agile software development technique in which two programmers work together at one workstation.
+- One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two programmers switch roles frequently.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Dynamic Testing
+
+Black Box Testing
+White Box Testing
+
+BBT= Functional Testing/ Behavioural Testing
+
+- It is conducted by testers
+- It is also known as Data Driven Testing
+- It is used to check functionality is working according to customer requirements
+- We implement both postive and negative test data to check the functionality or behaviour of the application
+
+ Black box testing technique
+   - Equivalence Class Partitioning
+   - Boundary Value Analysis
+   - Error guessing
+   - Usecase testing technique
+   - State Transition technique
+   - Decision Table
+
+Black box testing technique
+
+1. Equivalence Class Partitioning
+
+- Equivalence partitioning or equivalence class partitioning (ECP) is a software testing technique that divides the input data of a software unit into partitions of equivalent data from which test cases can be derived.
+
+
+2. Boundary Value Analysis
+
+BVA technique used to check Boundaries of the input
+- Datatypes for a particular field
+- We can identify the range of a particular datatype
+
+3. Error Guessing
+
+- Error Guessing is a Software Testing technique on guessing the error which can prevail in the code. It is an experience-based testing technique where the Test Analyst uses his/her experience to guess the problematic areas of the application. This technique necessarily requires skilled and experienced testers.
+
+4. Use Case / UML
+
+- A Use Case in Testing is a brief description of a particular use of the software application by an actor or user. 
+- Usecase is a document which describes an action/behaviour of the application
+- It consists of an Actor and a Scenario
+- It helps to understand the flow of the application
+
+5. State Transition Testing
+
+- It helps to understand the differents states of a particular transaction
+- A black box testing technique, in which outputs are triggered by changes to the input conditions or changes to 'state' of the system.
+
+6. Decision Table / Cause-Effect table
+
+- The decision table is a software testing technique which is used for testing the system behavior for different input combinations
+- It works on combination of various inputs
+- It works on permutation and combination
+- It can also be identified as Truth Table
+
+White box testing
+
+- It is also called as structural testing or glass box testing
+- Developers create test cases and write the programs
+- It is done by developers
+
+White Box Testing Techniques
+
+- Code Coverage
+  - Is a software testing metric that determines the number of lines of code that is successfully validated under a test procedure
+
+	- Path Coverage
+	  - Is a specific kind of methodical, sequential testing in which each individual line of code is assessed.
+
+	- Loop testing
+	  -  Is a kind of software testing that focuses exclusively on the correctness of loop constructions.
+
+	- Statement Coverage
+	  - Is a white box testing technique, which involves the execution of all the statements at least once in the source code.
+
+	- Condition Coverage
+	  - Is also known as Predicate Coverage in which each one of the Boolean expression have been evaluated to both TRUE and FALSE
+
+- Cyclomatic Complexity
+  - cyclomatic complexity is a metric used in software development to measure the complexity of a program.
+  - It also determines the least number of test cases required to test a functionality.
+  - It quantifies the number of linearly independent paths through a program's source code. The higher the cyclomatic complexity, the more complex the code    	generally is. In order to do this we make node diagrams.
+
+  Formulas to calculate cyclomatic complexity
+	- V(G) = E-N+2 (V(G) is Cyclomatic Complexity, E = number of edges, N = number of nodes)
+	- V(G) = P+1 (P is numberof predidcate nodes)
+	- V(G) = R (R is the number of regions)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+STLC
+
+Requirement Analysis							
+
+Test Planning 									
+
+Test Design								
+
+Test Case Development								
+
+Test Environment Setup								
+
+Test Execution										
+
+Defect Reporting
+											
+Test Completion										
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+RTM (Requirement Traceability Matrix)
+
+- RTM describes the mapping of Requirement’s with the Test cases.
+
+- The main purpose of RTM is to see that all test cases are covered so that no functionality should miss while doing Software testing.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Software Testing Metrics 
+
+- Metrics (a system or standard of measurement)
+- Software Testing Metrics are used to estimate the progress, quality, productivity and health of the software testing process.
+- The goal of software testing metrics is to improve the efficiency and effectiveness in the software testing process.
+
+
+Includes
+
+▪ Percentage of planned work done in test case preparation (or percentage of planned test cases implemented)
+▪ Percentage of planned work done in test environment preparation
+▪ Test case execution (e.g., number of test cases run/not run, test cases passed/failed, and/or test conditions passed/failed)
+▪ Defect information (e.g., defect density, defects found and fixed, failure rate, and confirmation test results)
+▪ Test coverage of requirements, user stories, acceptance criteria, risks, or code
+▪ Task completion, resource allocation and usage, and effort
+▪ Cost of testing
+
+Importance
+
+- Take decision for next phase of activities
+- Evidence of the claim or prediction
+- Understand the type of improvement required
+- Take decision or process or technology change
+
+Types of Metrics
+
+Process Metrics:
+- Test Coverage - 
+	Test Design:
+		▪ # Of Requirements / # Of Requirements Planned
+	Test Execution:
+		▪ # Of Test cases executed/ # Of Test cases Planned
+	Test Automation:
+		▪ # Of Test cases automated/ # Of Test cases
+
+- Defect Density - 
+	Total Defect density = (Total number of defects including both impact and nonimpact, found in all the phases + Post delivery defects)/Size
+
+- Defect arrival rate -
+	▪ # Of Defects * 100 / # of Test Cases planned for Execution
+
+
+Project Metrics:
+
+- Test Effectiveness -
+	# Of Test Cases failed (found defects)/# Of Test Cases executed
+
+- Defect Removal Efficiency -
+	(# of Defects fixed / Total # Of Defects found) * 100
+
+- Cost of quality -
+	% CoQ = (Total efforts spent on Prevention + Total efforts spent on Appraisal + Total efforts spent on failure or rework)*100/(Total efforts spent on project)
+
+- Effort Variance -
+	(Actual effort - Planned effort) / Planned effort) * 100
+planned effort                          actual effort
+4 weeks/200 test cases			4 weeks/150test cases   (150/4 - 200/4)/(200/4)*100
+
+- Schedule variance -
+	(Actual end date - Planned end date) / (Planned end date - Plan start date + 1) * 100
+Start date 01-09-2023  (10-11-2023 - 30-10-2023)/(30-10-2023 - 01-09-2023 + 1)*100 = (12 days)/(61 days) * 100
+Planned end date 30-10-2023 /  Actual end date 10-11-2023
+
+- Rejection index - 50 defects / 10 defects rejected 
+	# Of Defects rejected/# Of Defects raised (10/50)=1/5
+
+
+Productivity Metrics: 
+
+- Test case design productivity -
+	# Of Test cases (scripts) designed/ Total Test case design effort in hours
+	100/ (100/24) =24
+
+- Test case execution productivity -
+	# Of Test cases executed/ Total Test case executed effort in hours
+	80 test cases executed / (80/40) = 40
+
+Closure Metrics:
+Static Testing(Verification)
+- Test Design Review effort -
+	(Effort spent on Test Case design reviews / Total effort spent on Test Case design) * 100
+	100 test cases designed/8hrs
+	(100/8)design review effort
+	(100/24)design effort
+	(100/8)/(100/24)*100 = 300
+
+- Test Design Rework effort - 20 test cases are not good
+	(Effort spent on Test Case design review rework / Total effort spent on Test Case design) * 100
+	20/4hrs
+	100/24
+	(20/4)/(100/24)*100 = 120
+
+- KM(Knowledge Management) Effort -
+	(Total Effort spent on preparation of KM artifacts / Total efforts for entire project) * 100
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Use Case
+
+- An Use Case can be defined as a set of activities performed within a system by a user / Each use case describes one logical interaction with the system. 
+
+Importance
+
+▪ Describe a business process
+▪ Capture functional requirements of a system
+▪ Document design details of a system
+
+
+The Use Case Diagram has the following elements:
+- A stick figure, which represents Actors
+	• Actor is any entity that is external to the system and directly interacts with the
+	system, thus deriving some benefit from the interaction
+	• Actor can be a human being, a machine, or a software
+	• Actor is a role that a particular user plays while interacting with the system
+
+	Types of Actors
+		Primary Actor
+		▪ Initiates the Use Case
+		▪ Calls on the system to deliver a service
+		▪ Has a goal with respect to the system
+		Supporting Actor
+		▪ provides a service to the system under design
+
+
+- Ovals or ellipses, which represent Use Cases
+
+- Association lines, which indicate interactions between Actors and Use Cases.
+
+Actors and goals
+A GOAL is:
+▪ What an ACTOR wants to get with the help of the system
+An ACTION is
+▪ what the ACTOR must perform to reach the GOAL
+An INTERACTION is
+▪ a sequence of steps that must be followed to complete the ACTION
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Software Versioning
+
+Software versioning is the practice of assigning unique labels to different versions of software.
+It helps both user and stakeholders to understand and track different version of the product released in the market.
+
+
+- Version Numbering: Versions are typically labeled with numbers or alphanumeric identifiers. The most common scheme is a sequence of numbers separated by dots (e.g., 1.0.0) or a combination of numbers and words (e.g., v2.1-alpha).
+
+- Semantic Versioning (SemVer): A widely adopted versioning scheme where versions are represented as MAJOR.MINOR.PATCH.BUILD in these numbers signify different things:
+
+MAJOR: Represents significant milestones or changes in the software. Increments in the MAJOR version usually indicate substantial updates that might introduce new features or significant changes. Major version changes might also imply potential incompatibility with previous versions.
+
+MINOR: Indicates incremental improvements or additions to the software while maintaining backward compatibility with the previous MAJOR version. Changes in the MINOR version often include new functionalities or enhancements.
+
+REVISION/PATCH: This segment typically refers to patches, bug fixes, or minor updates that address issues or bugs found in the current version. These updates are usually backward compatible and aim to improve the stability or security of the software.
+
+BUILD: The BUILD number is often used for internal tracking purposes, especially in continuous integration and development environments. It represents the specific build or iteration of the software version, often generated with each new compilation or build process.
+
+
