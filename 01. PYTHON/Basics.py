@@ -70,8 +70,39 @@ def Variables():
     print(y," ",z," ",l," ")
 
 def Strings_Operations():
-    a = "Hello World"
+    # Printing String
+    print("Hello World")
+
+    # Quotes inside String
+    print("I'm fine")
+    print("Hello this is 'Jay' ")
+    print('Hello Jay, This is "Jacob" ')
+
+    # Assigning String to a Variable
+    s = "Hello"
+    print(s)
+
+    # Multiline String
+    a = """Hello everyone,
+      this is a example of multiline string,
+      this can be achieved using three double quotes """
     print(a)
+
+    b = '''Hello everyone,
+    this is a example of multiline string,
+    this can be achieved using three single quotes also.'''
+    print(b)
+
+    # String are Arrays
+    arr = "Hello World!"
+    print(arr[1]) # prints e, indexing starts from 0 
+    print(len(arr)) #Gives length of array arr 
+
+    # Looping through a string
+    for x in "banana":
+        print(x)
+
+
 
 
 datatypes()
