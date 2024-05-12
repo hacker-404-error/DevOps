@@ -70,9 +70,12 @@ def Variables():
     print(y," ",z," ",l," ")
 
 def Strings_Operations():
-    pass
+    a = "Hello World"
+    print(a)
+
 
 datatypes()
+Strings_Operations()
 
 
 
