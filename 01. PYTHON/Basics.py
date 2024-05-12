@@ -144,6 +144,20 @@ def Strings_Operations():
     # Looping through a string
     for x in "banana":
         print(x)
+    
+    # Check phrase in string using "in" keyword
+    txt = "Best things in life are free!!!!"
+    if "free" in txt:
+        print("Yes, 'free' is present")
+    
+    # Check phrase not present in string using "not in" keyword
+    check = "Best things in life are free!!!!"
+    if "expensive" not in check:
+        print("NO, 'expensive' is not present in string")
+
+    # Strings slicing
+    c = "Hello World!"
+     
 
 
 
