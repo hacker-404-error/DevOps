@@ -70,6 +70,10 @@ def Variables():
     print(y," ",z," ",l," ")
 
 def Strings_Operations():
+    # Printing a string
+    print("Hii Pritam")
+    # Quotes inside a code
+    print("HII 'Pritam'")
     pass
 
 datatypes()
