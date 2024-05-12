@@ -12,7 +12,7 @@ Binary Types:	bytes, bytearray, memoryview
 None Type:	NoneType
 '''  
 def datatypes():
-    
+
     a = "Hello World"
     print(a," : ",type(a),"\n")
 
@@ -69,6 +69,8 @@ def Variables():
     l = str(x)
     print(y," ",z," ",l," ")
 
+def Strings_Operations():
+    pass
 
 datatypes()
 
