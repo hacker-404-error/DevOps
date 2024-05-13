@@ -8,9 +8,26 @@
 - Then in 1991, a young fellow named **Linus Torvalds** started developing what we now know today as the Linux kernel.
 
 ```
-the term Linux is actually quite a misnomer, since it actually refers to the Linux kernel. However, many distributions use the Linux kernel so therefore are commonly known as Linux operating systems.
+- The term Linux is actually quite a misnomer, 
+- Since it actually refers to the Linux kernel. 
+- Many distributions use the Linux kernel so therefore are commonly known as Linux operating systems.
 
 ```
+
+- A linux system is divided into 3 parts:
+  - `Hardware`: Includes all the H/Ws like Memory CPU, Disks
+  - `Linux Kernel`: Core of the operating System 
+  - `User Space`: Beautiful View of the operating system, THE GUI
+
+# Linux Distributions
+- `Debian`
+- `Red Hat Enterprise Linux`
+- `Ubuntu`
+- `Fedora`
+- `Linux Mint`
+- `Gentoo`
+- `Arch Linux`
+- `open SUSE`
 
 
 [^1]: GNU Operating System.
