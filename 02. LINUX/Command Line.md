@@ -25,19 +25,37 @@
   - Default Prompt for Root User: hostname #.
 
 - `TENEX C Shell (tcsh)`
-  - a
+  - Shell Name: It is referred to as tcsh.
+  - Full Path to Command: /bin/tcsh.
+  - Default Prompt for Non-Root User: hostname:directory>.
+  - Default Prompt for Root User: hostname:directory#.
 
 - `KornShell (ksh)`
-  - s
+  - Shell Name: It is referred to as ksh.
+  - Full Path to Command: /bin/ksh or /bin/ksh93.
+  - Default Prompt for Non-Root User: $.
+  - Default Prompt for Root User: #.
 
 - `Debian Almquist Shell (dash)`
-  - f
+  - Shell Name: It is referred to as dash.
+  - Full Path to Command: /bin/dash.
+  - Default Prompt for Non-Root User: $.
+  - Default Prompt for Root User: #.
 
 - `Bourne Again Shell (Bash)`
-  - f
+  - Shell Name: It is referred to as bash.
+  - Full Path to Command: /bin/bash.
+  - Default Prompt for Non-Root User: $.
+  - Default Prompt for Root User: #.
 
 - `Z Shell (zsh)`
-  - f
+  - Shell Name: It is referred to as zsh.
+  - Full Path to Command: /bin/zsh.
+  - Default Prompt for Non-Root User: user@hostname location %.
+  - Default Prompt for Root User: hostname (user):~#.
 
 - `Friendly Interactive Shell (fish)`
-  - f
+  - Shell Name: It is referred to as fish.
+  - Full Path to Command: /usr/bin/fish.
+  - Default Prompt for Non-Root User: user@hostname location>.
+  - Default Prompt for Root User: root@hostname location#.
