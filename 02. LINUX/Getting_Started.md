@@ -1,6 +1,6 @@
 ## What is Linux
 
-- Linux is often referred to as an operating system, but in reality, it is more accurately described as a kernel
+- Linux is often referred to as an operating system, but in reality, it is more accurately described as a kernel.
 - `Definition`: It is an open-source operating system which is freely available to everyone.
 - `Development`: As it is open source, it is developed by sharing and collaboration of codes by world-wide developers.
 - `Manufacturer`: Linux kernel is developed by the community of developers from different parts of the world. Although the father of Linux, Linus Torvalds oversees things.
@@ -14,7 +14,7 @@
 
 - Linux is an open-source Unix-like operating system-based family on the Linux kernel, and the OS kernel was first published on 17 September 1991 by Linus Torvalds.
 - Typically, Linux is packaged as the Linux distribution, which contains the supporting libraries and system software and kernel, several of which are offered by the GNU Project.
-- Several Linux distributions use the term "Linux" in the title, but the Free Software Foundation uses the "GNU/Linux" title to focus on the necessity of GNU software, causing a few controversies.]
+- Several Linux distributions use the term "Linux" in the title, but the Free Software Foundation uses the "GNU/Linux" title to focus on the necessity of GNU software, causing a few controversies.
 
 ## Design of Linux OS
 
