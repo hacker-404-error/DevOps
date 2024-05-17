@@ -188,22 +188,23 @@ drwxr-xr-x    3 root     root            60 May 17 13:39 jyotsna
 localhost:~#
 ```
 
-- `Touch`
+- `Touch`: Creates a new empty file.
+  - Also used to change timestamps on existing files and directories.
 
 ```
-localhost:~/jyotsna# touch linux.txt
+localhost:~/jyotsna# touch Myfile
 localhost:~/jyotsna# ls -l
 total 4
-drwxr-xr-x    2 root     root            37 May 14 20:44 bharti
--rw-r--r--    1 root     root             0 May 14 20:49 linux.txt
+-rw-r--r--    1 root     root             0 May 17 14:21 Myfile
+drwxr-xr-x    3 root     root            57 May 17 13:39 pritam
 ```
 
 ```
-localhost:~/jyotsna# touch linux.txt
+localhost:~/jyotsna# touch Myfile
 localhost:~/jyotsna# ls -l
 total 4
-drwxr-xr-x    2 root     root            37 May 14 20:44 bharti
--rw-r--r--    1 root     root             0 May 14 20:50 linux.txt
+-rw-r--r--    1 root     root             0 May 17 14:22 Myfile
+drwxr-xr-x    3 root     root            57 May 17 13:39 pritam
 ```
 
 - `file`:
