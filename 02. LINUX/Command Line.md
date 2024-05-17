@@ -207,7 +207,8 @@ total 4
 drwxr-xr-x    3 root     root            57 May 17 13:39 pritam
 ```
 
-- `file`:
+- `file`: Show's description of the file’s contents.
+  - In Linux, filenames aren’t required to represent the contents of the file. You can create a file called funny.gif that isn’t actually a GIF.
 
 ```
 localhost:~/jyotsna# file linux.txt
@@ -222,7 +223,8 @@ localhost:~/jyotsna#
 
 ```
 
-- `cat`:
+- `cat`: To read a file.
+  - It not only displays file contents but it can combine multiple files and show you the output of them.
 
 ```
 localhost:~/jyotsna# cat linux.txt python.txt
@@ -232,7 +234,7 @@ this is a python file
 localhost:~/jyotsna#
 ```
 
-- `less`
+- `less`: 
 
 ```
 localhost:~/pritam/das# less html.txt
