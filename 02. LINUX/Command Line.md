@@ -119,66 +119,96 @@ localhost:~/jyotsna/bharti#
 ```
 
 - `ls`: List Directories
-  - ls -l:
-  - ls -a:
+  - ls : The "ls" command will list directories and files in the current directory by default.
+  - ls /home/pete : With this we can specify which path you want to list the directories of.
+  - ls -l : This shows a detailed list of files in a long format. This will show you detailed information,
+           Starting from the left: file permissions, number of links, owner name, owner group, file size, timestamp of last
+           modification, and file/directory name.
+  - ls -a : Filenames that start with . are hidden, you can view them however with the ls command and pass the -a flag to
+            it (a for all).
+  - ls -la : As we added -a and -l, well you can add them both together with -la. The order of the flags determines which 
+             order it goes in, most of the time this doesn’t really matter so you can also do ls -al and it would still 
+             work.
+
+```
+localhost:~# ls
+bench.py    hello.c     jp          readme.txt
+bharti      hello.js    jyotsna
+localhost:~#
+```
+
+```
+localhost:~#
+localhost:~# cd /root/jyotsna/pritam/das
+localhost:~/jyotsna/pritam/das# cd ~
+localhost:~# ls /root/jyotsna
+pritam
+localhost:~# ls /root/jyotsna/pritam
+das
+localhost:~#
+```
 
 ```
 localhost:~# ls -l
-total 24
+total 28
 -rw-r--r--    1 root     root           114 Jul  5  2020 bench.py
+drwxr-xr-x    2 root     root            37 May 17 13:42 bharti
 -rw-r--r--    1 root     root            76 Jul  3  2020 hello.c
 -rw-r--r--    1 root     root            22 Jun 26  2020 hello.js
-drwxr-xr-x    3 root     root            60 May 14 20:44 jyotsna
-drwxr-xr-x    3 root     root            57 May 14 20:40 pritam
+drwxr-xr-x    2 root     root            37 May 17 13:42 jp
+drwxr-xr-x    3 root     root            60 May 17 13:39 jyotsna
 -rw-r--r--    1 root     root           151 Jul  5  2020 readme.txt
 localhost:~#
 ```
 
 ```
 localhost:~# ls -a
-.             .cache        bench.py      jyotsna
-..            .mozilla      hello.c       pritam
-.ash_history  .wine         hello.js      readme.txt
+.             .cache        bench.py      hello.js      readme.txt
+..            .mozilla      bharti        jp
+.ash_history  .wine         hello.c       jyotsna
 localhost:~#
 ```
 
 ```
-localhost:~# ls -al
-total 48
-drwxr-xr-x    7 root     root           284 Jan  9  2021 .
-drwxrwxrwx   21 root     root           461 May 14 20:48 ..
--rw-------    1 root     root           281 May 14 20:48 .ash_history
+localhost:~# ls -la
+total 52
+drwxr-xr-x    8 root     root           303 Jan  9  2021 .
+drwxrwxrwx   21 root     root           461 May 17 14:16 ..
+-rw-------    1 root     root           303 May 17 14:16 .ash_history
 drwx------    3 root     root            61 Jul  6  2020 .cache
 drwx------    5 root     root           124 Jul  6  2020 .mozilla
 drwxr-xr-x    4 root     root           202 Jul  6  2020 .wine
 -rw-r--r--    1 root     root           114 Jul  5  2020 bench.py
+drwxr-xr-x    2 root     root            37 May 17 13:42 bharti
 -rw-r--r--    1 root     root            76 Jul  3  2020 hello.c
 -rw-r--r--    1 root     root            22 Jun 26  2020 hello.js
-drwxr-xr-x    3 root     root            60 May 14 20:44 jyotsna
-drwxr-xr-x    3 root     root            57 May 14 20:40 pritam
+drwxr-xr-x    2 root     root            37 May 17 13:42 jp
+drwxr-xr-x    3 root     root            60 May 17 13:39 jyotsna
 -rw-r--r--    1 root     root           151 Jul  5  2020 readme.txt
 localhost:~#
 ```
 
-- `Touch`
+- `Touch`: Creates a new empty file.
+  - Also used to change timestamps on existing files and directories.
 
 ```
-localhost:~/jyotsna# touch linux.txt
+localhost:~/jyotsna# touch Myfile
 localhost:~/jyotsna# ls -l
 total 4
-drwxr-xr-x    2 root     root            37 May 14 20:44 bharti
--rw-r--r--    1 root     root             0 May 14 20:49 linux.txt
+-rw-r--r--    1 root     root             0 May 17 14:21 Myfile
+drwxr-xr-x    3 root     root            57 May 17 13:39 pritam
 ```
 
 ```
-localhost:~/jyotsna# touch linux.txt
+localhost:~/jyotsna# touch Myfile
 localhost:~/jyotsna# ls -l
 total 4
-drwxr-xr-x    2 root     root            37 May 14 20:44 bharti
--rw-r--r--    1 root     root             0 May 14 20:50 linux.txt
+-rw-r--r--    1 root     root             0 May 17 14:22 Myfile
+drwxr-xr-x    3 root     root            57 May 17 13:39 pritam
 ```
 
-- `file`:
+- `file`: Show's description of the file’s contents.
+  - In Linux, filenames aren’t required to represent the contents of the file. You can create a file called funny.gif that isn’t actually a GIF.
 
 ```
 localhost:~/jyotsna# file linux.txt
@@ -193,7 +223,8 @@ localhost:~/jyotsna#
 
 ```
 
-- `cat`:
+- `cat`: To read a file.
+  - It not only displays file contents but it can combine multiple files and show you the output of them.
 
 ```
 localhost:~/jyotsna# cat linux.txt python.txt
@@ -203,7 +234,14 @@ this is a python file
 localhost:~/jyotsna#
 ```
 
-- `less`
+- `less`: Navigate through a text file page by page.
+  - Use the following keyboard commands to navigate through less:
+    - q - Used to quit out of less and go back to your shell.
+    - Page up, Page down, Up and Down - Navigate using the arrow keys and page keys.
+    - g - Moves to beginning of the text file.
+    - G - Moves to the end of the text file.
+    - /search - You can search for specific text inside the text document. Prefacing the words you want to search with /
+    - h - If you need a little help about how to use less while you’re in less, use help.
 
 ```
 localhost:~/pritam/das# less html.txt
@@ -221,7 +259,7 @@ this is a html file
 html.txt
 ```
 
-- `history`
+- `history`: Shows the history of commands that you previously entered.
 
 ```
 localhost:~/pritam/das# history
@@ -248,6 +286,11 @@ localhost:~/pritam/das# history
   20 cd ..
   21 cd ~
 localhost:~/pritam/das#
+```
+
+- `clear`: Command to clear up your display.
+
+```
 ```
 
 - `cp`:
