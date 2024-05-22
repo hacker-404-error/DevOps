@@ -1,3 +1,17 @@
+## INDEX
+
+| Number | Number |
+| ------ | ------ |
+|        |        |
+|        |        |
+|        |        |
+|        |        |
+|        |        |
+|        |        |
+|        |        |
+|        |        |
+|        |        |
+
 ## What is Software Engineering?
 
 - The Term Software Engineering is the product of two words
@@ -91,12 +105,12 @@
 </div>
 <br>
 
-
 ### SDLC Models
+
 - Software Development life cycle (SDLC) is a spiritual model used in project management that defines the stages include in an information system development project, from an initial feasibility study to the maintenance of the completed application.
 
-- There are different software development life cycle models specify and design, which are followed during the software development phase. 
-- These models are also called "Software Development Process Models." 
+- There are different software development life cycle models specify and design, which are followed during the software development phase.
+- These models are also called "Software Development Process Models."
 - Each process model follows a series of phase unique to its type to ensure success in the step of software development.
 
 <br>
@@ -105,10 +119,43 @@
 </div>
 <br>
 
+### Requirement Engineering
 
+- Requirements engineering (RE) refers to the process of defining, documenting, and maintaining requirements in the engineering design process.
+- Requirement engineering provides the appropriate mechanism to understand what the customer desires, analyzing the need, and assessing feasibility, negotiating a reasonable solution, specifying the solution clearly, validating the specifications and managing the requirements as they are transformed into a working system.
 
+#### Requirement Engineering Process
 
+- It is a four-step process, which includes-
+  - Feasibility Study
+  - Requirement Elicitation and Analysis
+  - Software Requirement Specification
+  - Software Requirement Validation
+  - Software Requirement Management
 
+<br>
+<div align="center">
+    <img src="https://static.javatpoint.com/tutorial/software-engineering/images/requirement-engineering.jpg" width=500px alt="Requirement Engineering Process">
+</div>
+<br>
+
+1. `Feasibility Study`
+   - The objective behind the feasibility study is to create the reasons for developing the software that is acceptable to users, flexible to change and conformable to established standards.
+   - Types of Feasibility
+     - `Technical Feasibility` - Technical feasibility evaluates the current technologies, which are needed to accomplish customer requirements within the time and budget.
+     - `Operational Feasibility` - Operational feasibility assesses the range in which the required software performs a series of levels to solve business problems and customer requirements.
+     - `Economic Feasibility` - Economic feasibility decides whether the necessary software can generate financial profits for an organization.
+2. `Requirement Elicitation and Analysis`:
+   - This is also known as the gathering of requirements. Here, requirements are identified with the help of customers and existing systems processes, if available.
+   - Analysis of requirements starts with requirement elicitation. The requirements are analyzed to identify inconsistencies, defects, omission, etc. We describe requirements in terms of relationships and also resolve conflicts if any.
+
+<br>
+<div align="center">
+    <img src="https://static.javatpoint.com/tutorial/software-engineering/images/requirement-engineering2.jpg" width=500px alt="Requirement Elicitation and Analysis">
+</div>
+<br>
+
+3.  
 
 ---
 
